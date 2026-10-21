@@ -59,11 +59,11 @@ reading,temperature,fan
 3,60.0,0
 ```
 
-- reading: Reading number, starting at 0.
+- reading: Reading number, starting at 1.
 - temperature: Temperature in degrees Fahrenheit.
-- fan: 0 means OFF.
+- fan: 0 means OFF; 1 means ON.
+- The fan remains OFF for these readings because none exceeds 80°F.
 
-The fan remains OFF for these readings because none exceeds 80°F.
 
 ## Testing
 
@@ -73,7 +73,7 @@ I manually tested the following behavior:
 - At 80°F, the fan turns ON.
 - At 75°F, the fan turns OFF.
 - Between 75°F and 80°F, the previous fan state is preserved.
-- At 80°F or above, an overheating warning appears.
+- At 95°F or above, an overheating warning appears.
 - Readings of -40°F and 125°F are accepted.
 - Readings below -40°F or above 125°F cause an error and
   end the program.
