@@ -55,16 +55,15 @@ Example:
 ```csv
 reading,temperature,fan
 1,74.0,0
-2,78.0,1
-3,60.0,1
+2,78.0,0
+3,60.0,0
 ```
 
-- reading: Reading number, starting at 1.
+- reading: Reading number, starting at 0.
 - temperature: Temperature in degrees Fahrenheit.
-- fan: 0 means OFF; 1 means ON.
+- fan: 0 means OFF.
 
-At 78°F, the fan stays ON in this example because the previous
-reading turned it on and the temperature has not dropped to 75°F.
+The fan remains OFF for these readings because none exceeds 80°F.
 
 ## Testing
 
